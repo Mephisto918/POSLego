@@ -1,0 +1,22 @@
+{
+  "name": "poslego",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm-run-all --parallel dev:frontend dev:backend",
+    "dev:frontend": "cd Frontend",
+    "dev:backend": "cd Backend",
+    "start:frontend": "start cmd /k \"cd Frontend && npm run dev\"",
+    "start:backend": "start cmd /k \"cd Backend && npm run dev\"",
+    "start": "npm-run-all start:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
