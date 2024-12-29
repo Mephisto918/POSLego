@@ -1,0 +1,72 @@
+@import url(./variables.css);
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    /* transition: all 0.5s; */
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+}
+
+tr,th,td{
+    padding: 0.3rem;
+}
+table{
+    width: 100%;
+}
+
+input,select,textarea{
+    border: none;
+    outline: none;   
+    font:inherit;
+    resize: none;
+    &:focus{
+        font: inherit;
+    }
+    >option{
+        font: inherit;
+    }
+}
+
+form,input{
+    font-family: inherit;
+}
+
+input[readonly]{
+    cursor: not-allowed;
+}
+
+button,a{
+    /* font: inherit;
+    line-height: normal;
+    text-align: inherit;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    border: 0 none transparent; */
+
+    all: unset;
+} 
+
+
+body{
+    background-color: var(--glass-bg-hard);
+    background-image: var(--svg-bg);
+    font-family: var(--text-fam);
+    color: var(--font-color-light);
+}
+
+/* font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400; */
+
+.no{
+    cursor: not-allowed;
+}
