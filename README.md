@@ -18,21 +18,40 @@ Before running this application, you need to have the following installed:
 
 ## PostgreSQL Database Setup
 
-1. Ensure PostgreSQL is installed and running on your machine.
-2. If `psql` commands are global, run the following command from the migration folder to set up the database:
-   psql -U postgres -h localhost -p 5432 -d <database_target> -f "<path_of_backup.sql>"
-3. If `psql` is not recognized, navigate to the PostgreSQL bin directory:
-   cd C:\Program Files\PostgreSQL\17\bin
-
-Then, open the command prompt and execute the `psql` command from there.
+1. **Ensure PostgreSQL is installed and running** on your machine. You can download it from the [official PostgreSQL website](https://www.postgresql.org/download/).**
+   
+2. **Create the `POSLEGO` database** before importing the backup.**
+   - You can create the database by running the following command in the PostgreSQL shell:
+   ```bash
+   CREATE DATABASE POSLEGO;
+   ```
+   
+3. **Import the database backup**:
+   - If psql commands are globally available on your machine, navigate to the migration folder (or wherever your backup SQL file is stored) and run:
+   ```cmd
+   psql -U postgres -h localhost -p 5432 -d POSLEGO -f "<path_of_backup.sql>"
+   ```
+      - Replace `<path_of_backup.sql>` with the actual path to your backup SQL file.
+         - Ex.`db-setup/backup.sql`
+   - If `psql` is not recognized, navigate to the PostgreSQL bin directory:
+   ```cmd
+   C:\Program Files\PostgreSQL\17\bin
+   ```
+   - Then, open the command prompt and execute the `psql` command from there.
+        - Ex. `C:\Program Files\PostgreSQL\17\bin\psql -U postgres -h localhost -p 5432 -d POSLEGO -f "<path_of_backup.sql>"`
+   
 
 ## Installation
 
 1. Clone the repository to your local machine:
 git clone <repo_url>
-   cd <your_project_folder>
+   ```cmd
+   cd POSLego
+   ```
 2. Install dependencies for the project by running:
+   ```cmd
    npm run i-dep
+   ```
 This will install dependencies for both the Backend and Frontend folders.
 
 ## Running the Application
@@ -40,9 +59,13 @@ This will install dependencies for both the Backend and Frontend folders.
 Once the dependencies are installed, you can run the project:
 
 1. Start the Backend and Frontend by running:
+   ```cmd 
    npm run start
-2. Open your browser and go to:
+   ```
+3. Open your browser and go to:
+   ```cmd
    http://localhost:5173
+   ```
 You should now be able to use the POS system!
 
 
