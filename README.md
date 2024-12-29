@@ -44,7 +44,7 @@ Before running this application, you need to have the following installed:
 ## Installation
 
 1. Clone the repository to your local machine:
-git clone <repo_url>
+git clone [https://github.com/Mephisto918/POSLego.git]
    ```cmd
    cd POSLego
    ```
